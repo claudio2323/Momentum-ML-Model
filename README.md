@@ -42,12 +42,6 @@ We implemented three different models, each with unique strengths:
 ## HYPERPARAMETER OPTIMSATION
 Each model underwent specific hyperparameter optimization:
 
-SimpleTransformerClassifier:
-- Learning Rate: 0.00001 to 0.00005
-- Sequence Length: 20 to 90
-- Batch Size: 12, 32, 64
-- Best config: lr=0.00005, seq_length=60, batch_size=64
-
 Random Forest:
 - n_estimators: [100, 200]
 - max_depth: [5, 10, 20]
@@ -62,13 +56,15 @@ XGBoost:
 - subsample: [0.8, 0.9]
 - Best config: max_depth=3, learning_rate=0.01, n_estimators=200
 
+SimpleTransformerClassifier:
+- Learning Rate: 0.00001 to 0.00005
+- Sequence Length: 20 to 90
+- Batch Size: 12, 32, 64
+- Best config: lr=0.00005, seq_length=60, batch_size=64
+
+  
 ## RESULTS
 Performance comparison across models:
-
-SimpleTransformerClassifier:
-- Best Accuracy: 38.847%
-- Minimum Loss: 1.08537
-- Strong performance on sequential patterns
 
 Random Forest:
 - Accuracy: ~39%
@@ -85,6 +81,11 @@ Combined  Random Forest + XGBoost
 - Competitive performance
 - Better handling mixing the 2 approaches 50-50 for the prediction
 
+SimpleTransformerClassifier:
+- Best Accuracy: 38.847%
+- Minimum Loss: 1.08537
+- Strong performance on sequential patterns
+  
 Achieving 39% accuracy in a three-class financial prediction problem (Buy/Sell/Hold) is actually quite notable when properly contextualized. While this might seem only slightly better than the default probability of 33.33% (random chance with equal class distribution), in financial markets even a small edge can translate into significant profits when consistently applied, in this case over 40 instruments. This is particularly true because financial markets are highly efficient and notoriously difficult to predict - they incorporate vast amounts of information and are influenced by countless variables, making any consistent advantage over random chance valuable. The fact that all three sophisticated approaches ( RF + XGBoost, and AI Transformer) achieve similar classification accuracy around 39% suggests this might represent a meaningful signal rather than just statistical noise. Moreover, when this slight predictive advantage is combined with proper risk management and portfolio optimization it can lead to substantial improvements in risk-adjusted returns as shown below in the Portfolio Performance section.
 
 
