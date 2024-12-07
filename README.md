@@ -124,6 +124,14 @@ Key Insights:
    - AI Transformer achieves better returns while maintaining lower risk metrics
    - Machine learning approaches (both traditional and deep learning) show better drawdown control
 
+
+![RF XGBoost Profitability Chart](RF XGBoost Profitability Chart.jpg)
+*Figure 1: Profitability of RF + XGBoost Model, test 01/01/21 to 14/09/24*
+
+![Transformer Profitability Chart](Transformer Profitability Chart.jpg)
+*Figure 1: Profitability of RF + XGBoost Model, test 01/01/21 to 14/09/24*
+
+
 ## CONTACT DETAILS
 For further information about this project or collaboration opportunities:
 - GitHub: [https://github.com/claudio2323/Momentum-ML-Model]
