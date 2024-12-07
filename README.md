@@ -19,23 +19,25 @@ The model processes financial time series data organized into sequential windows
 ## MODEL 
 We implemented three different models, each with unique strengths:
 
-1. SimpleTransformerClassifier:
-   - Neural network designed for sequence processing
-   - 2-head attention mechanism for pattern recognition
-   - Global average pooling and classification head
-   - Balances complexity with computational efficiency
-
-2. Random Forest:
+1. Random Forest:
    - Ensemble of 200 decision trees
    - Excellent at handling non-linear relationships
    - Built-in feature importance assessment
    - Robust to outliers and noise
 
-3. XGBoost:
+2. XGBoost:
    - Gradient boosting implementation
    - Progressive learning from mistakes
    - Handles missing values automatically
    - Strong regularization capabilities
+   - 
+3. Random Forest + XGBoost Mix 50-50 classification
+ 
+4. SimpleTransformerClassifier:
+   - Neural network designed for sequence processing
+   - 2-head attention mechanism for pattern recognition
+   - Global average pooling and classification head
+   - Balances complexity with computational efficiency
 
 ## HYPERPARAMETER OPTIMSATION
 Each model underwent specific hyperparameter optimization:
@@ -67,7 +69,6 @@ SimpleTransformerClassifier:
 - Best Accuracy: 38.847%
 - Minimum Loss: 1.08537
 - Strong performance on sequential patterns
-- Sharpe Ratio ....
 
 Random Forest:
 - Accuracy: ~39%
@@ -79,12 +80,13 @@ XGBoost:
 - Competitive performance
 - Better handling of market regime changes
 
-COmbined  Random Forest + XGBoost
+Combined  Random Forest + XGBoost
 - Accuracy: ~39%
 - Competitive performance
 - Better handling mixing the 2 approaches 50-50 for the prediction
-- Sharpe Ratio ....
-  
+
+Achieving 39% accuracy in a three-class financial prediction problem (Buy/Sell/Hold) is actually quite notable when properly contextualized. While this might seem only slightly better than the default probability of 33.33% (random chance with equal class distribution), in financial markets even a small edge can translate into significant profits when consistently applied, in this case over 40 instruments. This is particularly true because financial markets are highly efficient and notoriously difficult to predict - they incorporate vast amounts of information and are influenced by countless variables, making any consistent advantage over random chance valuable. The fact that all three sophisticated approaches ( RF + XGBoost, and AI Transformer) achieve similar classification accuracy around 39% suggests this might represent a meaningful signal rather than just statistical noise. Moreover, when this slight predictive advantage is combined with proper risk management and portfolio optimization it can lead to substantial improvements in risk-adjusted returns as shown below in the Portfolio Performance section.
+
 
 ### Equal-Weighted Portfolio Performance: Model Comparison (01/01/21 to 14/09/24)
 
