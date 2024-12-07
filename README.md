@@ -16,6 +16,9 @@ The model processes financial time series data organized into sequential windows
 - Standard scaling for numerical features and one-hot encoding for categorical features in RF/XGBoost
 - Proper time series splits to prevent future data leakage in all models
 
+![Baseline_Momentum_Strategy_Chart](Baseline_Momentum_Strategy_Chart.png)
+*Figure 1: Simple Momentum Strategy, using trading signals based on different basic momentum strategies (EMA crossover, returns)(period: 1998 to 2024*
+
 ## MODEL 
 We implemented three different models, each with unique strengths:
 
@@ -126,10 +129,10 @@ Key Insights:
 
 
 ![RF XGBoost Profitability Chart](RF_XGBoost_Profitability_Chart.png)
-*Figure 1: Profitability of RF + XGBoost Model (test period: 01/01/21 to 14/09/24)*
+*Figure 2: Profitability of RF + XGBoost Model (test period: 01/01/21 to 14/09/24)*
 
 ![Transformer_Profitability_Chart](Transformer_Profitability_Chart.png)
-*Figure 2: Profitability of Transformer Model (test period: 01/01/21 to 14/09/24)*
+*Figure 3: Profitability of Transformer Model (test period: 01/01/21 to 14/09/24)*
 
 
 
