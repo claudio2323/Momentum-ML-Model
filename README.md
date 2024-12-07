@@ -125,11 +125,12 @@ Key Insights:
    - Machine learning approaches (both traditional and deep learning) show better drawdown control
 
 
-![RF XGBoost Profitability Chart](RF XGBoost Profitability Chart.jpg)
-*Figure 1: Profitability of RF + XGBoost Model, test 01/01/21 to 14/09/24*
+![RF XGBoost Profitability Chart](RF_XGBoost_Profitability_Chart.png)
+*Figure 1: Profitability of RF + XGBoost Model (test period: 01/01/21 to 14/09/24)*
 
-![Transformer Profitability Chart](Transformer Profitability Chart.jpg)
-*Figure 1: Profitability of RF + XGBoost Model, test 01/01/21 to 14/09/24*
+![Transformer_Profitability_Chart](Transformer_Profitability_Chart.png)
+*Figure 2: Profitability of Transformer Model (test period: 01/01/21 to 14/09/24)*
+
 
 
 ## CONTACT DETAILS
