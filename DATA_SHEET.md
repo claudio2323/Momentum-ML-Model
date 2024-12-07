@@ -46,63 +46,45 @@ analyze_and_visualize(df_rearranged)
 ## Preprocessing/Cleaning
 1. Price Data:
    - Roll-adjusted continuous futures prices
-   - Handling of corporate actions where applicable
-   - Currency conversion to USD where necessary
 
 2. Feature Engineering:
    - Returns calculation
    - Volatility normalization
    - Technical indicators
-   - Cross-sectional factors
 
 3. Data Quality Checks:
    - Missing data verification
    - Outlier detection
    - Holiday calendar alignment
-   - Volume/liquidity filters
 
 ## Uses
 Primary uses include:
 - Development of systematic trading strategies
 - Machine learning model training and testing
-- Market behavior analysis
-- Risk management research
 - Benchmarking against traditional strategies
 
 ## Distribution
 - Source: Bloomberg Professional Terminal
 - Usage Rights: According to Bloomberg data license
 - Access: Requires Bloomberg subscription
-- Data Format: CSV/Python compatible formats
+- not distibuted as part of this submission
 
 ## Maintenance
 - Daily updates via Bloomberg
-- Regular data quality checks
-- Periodic review of instrument liquidity
-- Updates to roll schedules and contract specifications
+- Regular data quality checks via Bloomberg
+- Updates to roll schedules and contract specifications via Bloomberg
 
 ## Notes and Limitations
-1. Survivorship Bias:
-   - Dataset includes currently liquid contracts
-   - Historical contracts that ceased trading are not included
 
-2. Market Microstructure:
+1. Market Microstructure:
    - Data is daily close only
    - Intraday patterns not captured
-   - Transaction costs not included in raw data
+   - Transaction costs are approximated by me, as a rough %. realisitc in normal conditions but not as precise.
 
-3. Asset-Specific Considerations:
-   - FX: Spot-forward differences
-   - Bonds: Delivery options
-   - Commodities: Physical delivery considerations
-   - Equity: Dividend adjustments
-   - Credit: Roll effects
-
-4. Known Data Quality Issues:
+2. Known Data Quality Issues:
    - Early period sparsity for some contracts
    - Credit instruments limited to post-2007
    - Some markets show extreme events (e.g., WTI Crude negative prices in 2020)
-
 
   
 ## Complete Contract Statistics
