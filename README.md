@@ -14,7 +14,7 @@ The model processes financial time series data organized into sequential windows
 - Standardization to normalize the scale of different features
 - Sliding window approach to create sequences for the transformer model
 - Standard scaling for numerical features and one-hot encoding for categorical features in RF/XGBoost
-- Proper time series splits to prevent future data leakage in all models
+- Time series splits to prevent future data leakage in all models
 
 ![Baseline_Momentum_Strategy_Chart](Baseline_Momentum_Strategy_Chart.png)
 *Figure 1: Simple Momentum Strategy, using trading signals based on different basic momentum strategies (EMA crossover, returns)(period: 1998 to 2024*
@@ -22,21 +22,13 @@ The model processes financial time series data organized into sequential windows
 ## MODEL 
 We implemented three different models, each with unique strengths:
 
-1. Random Forest:
-   - Ensemble of 200 decision trees
-   - Excellent at handling non-linear relationships
-   - Built-in feature importance assessment
-   - Robust to outliers and noise
+1. Random Forest Classifier
 
-2. XGBoost:
-   - Gradient boosting implementation
-   - Progressive learning from mistakes
-   - Handles missing values automatically
-   - Strong regularization capabilities
-   - 
-3. Random Forest + XGBoost Mix 50-50 classification
+2. XGBoost Classifier
+
+3. Random Forest + XGBoost Mix, 50-50 classification
  
-4. SimpleTransformerClassifier:
+4. Simple Transformer Classifier:
    - Neural network designed for sequence processing
    - 2-head attention mechanism for pattern recognition
    - Global average pooling and classification head
@@ -59,7 +51,7 @@ XGBoost:
 - subsample: [0.8, 0.9]
 - Best config: max_depth=3, learning_rate=0.01, n_estimators=200
 
-SimpleTransformerClassifier:
+Simple Transformer Classifier:
 - Learning Rate: 0.00001 to 0.00005
 - Sequence Length: 20 to 90
 - Batch Size: 12, 32, 64
@@ -84,15 +76,15 @@ Combined  Random Forest + XGBoost
 - Competitive performance
 - Better handling mixing the 2 approaches 50-50 for the prediction
 
-SimpleTransformerClassifier:
+Simple Transformer Classifier:
 - Best Accuracy: 38.847%
 - Minimum Loss: 1.08537
 - Strong performance on sequential patterns
   
-Achieving 39% accuracy in a three-class financial prediction problem (Buy/Sell/Hold) is actually quite notable when properly contextualized. While this might seem only slightly better than the default probability of 33.33% (random chance with equal class distribution), in financial markets even a small edge can translate into significant profits when consistently applied, in this case over 40 instruments. This is particularly true because financial markets are highly efficient and notoriously difficult to predict - they incorporate vast amounts of information and are influenced by countless variables, making any consistent advantage over random chance valuable. The fact that all three sophisticated approaches ( RF + XGBoost, and AI Transformer) achieve similar classification accuracy around 39% suggests this might represent a meaningful signal rather than just statistical noise. Moreover, when this slight predictive advantage is combined with proper risk management and portfolio optimization it can lead to substantial improvements in risk-adjusted returns as shown below in the Portfolio Performance section.
+Achieving 39% accuracy in a three-class financial prediction problem (Buy/Sell/Hold). Despite the apparently low value of accuracy, is actually quite notable when properly contextualized. While this might seem only slightly better than the default probability of 33.33% (random chance with equal class distribution), in financial markets even a small edge can translate into significant profits when consistently applied, in this case over 40 instruments. This is particularly true because financial markets are highly efficient and notoriously difficult to predict - they incorporate vast amounts of information and are influenced by many variables, making any consistent advantage over random chance valuable. All three  approaches  RF + XGBoost, and AI Transformer achieve similar classification accuracy around 39%. When this small predictive advantage is combined with risk management and portfolio optimization/diversification over sevral asset classes and securities (5 and 40 here),  it can lead to substantial improvements in risk-adjusted returns as shown below in the Equal-Weighted Portfolio Performance section.
 
 
-### Equal-Weighted Portfolio Performance: Model Comparison (01/01/21 to 14/09/24)
+### Equal-Weighted Portfolio Performance: Model Comparison (01/01/21 to 14/09/24) out of sample.
 
 | Metric | Simple Momentum | RF + XGBoost | AI Transformer |
 |--------|-----------------|--------------|----------------|
