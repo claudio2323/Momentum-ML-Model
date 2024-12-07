@@ -1,5 +1,5 @@
-# Multi-Model Momentum Trading Strategy for Cross Asset Futures 
-## # Multi-Model Financial Time Series Classification
+# A Trading Strategy using Liquid Futures: can we improve classic Momentum strategies by using ML and AI
+## Multi-Model Financial Time Series Classification
 Capstone Project Submission for Imperial College Certificate in Machine Learning and AI 2024 
 
 ## Project Overview
