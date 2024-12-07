@@ -6,8 +6,8 @@ Capstone Project Submission for Imperial College Certificate in Machine Learning
 A  machine learning project that combines multiple models (Random Forest, XGBoost, and Transformer) to predict trading signals across various liquid futures markets and credit derivatives swaps (CDS). The strategy encompasses multiple asset classes and compares performance against traditional CTA momentum strategies.
 
 
-## NON-TECHNICAL EXPLANATION OF YOUR PROJECT
-This project develops AI systems that analyze patterns in financial market data to predict trading signals (Buy, Hold, or Sell). We compare three different approaches: a deep learning model (SimpleTransformerClassifier) that learns complex patterns like humans reading charts, and two traditional machine learning models (Random Forest and XGBoost) that excel at combining multiple simple decision rules. This combination allows us to leverage different strengths: the transformer's ability to understand sequences, Random Forest's robustness, and XGBoost's ability to learn from mistakes progressively.
+## NON-TECHNICAL EXPLANATION 
+This project develops ML and AI systems that analyze patterns in financial market data to predict trading signals (Buy, Hold, or Sell) over the next 1 to 5 business days. We compare three different approaches: a deep learning model (SimpleTransformerClassifier) that learns complex patterns like humans reading charts, and two traditional machine learning models (Random Forest and XGBoost) that excel at combining multiple simple decision rules. We also use a simple momentum model, which is built by averaging out signals and makes no use of any ML or AI, as a benchmark. This combination allows us to leverage different strengths: the transformer's ability to understand sequences, Random Forest's robustness, and XGBoost's ability to learn from mistakes progressively.
 
 ## DATA
 The model processes financial time series data organized into sequential windows. Each sequence contains multiple features that capture market behavior over time. The data is preprocessed using:
